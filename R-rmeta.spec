@@ -4,7 +4,7 @@
 #
 Name     : R-rmeta
 Version  : 3.0
-Release  : 1
+Release  : 2
 URL      : https://cran.r-project.org/src/contrib/rmeta_3.0.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/rmeta_3.0.tar.gz
 Summary  : Meta-Analysis
