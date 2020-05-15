@@ -4,7 +4,7 @@
 #
 Name     : R-rmeta
 Version  : 3.0
-Release  : 2
+Release  : 3
 URL      : https://cran.r-project.org/src/contrib/rmeta_3.0.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/rmeta_3.0.tar.gz
 Summary  : Meta-Analysis
@@ -19,21 +19,22 @@ meta-analysis for two-sample comparisons and cumulative
 
 %prep
 %setup -q -c -n rmeta
+cd %{_builddir}/rmeta
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1584116418
+export SOURCE_DATE_EPOCH=1589538154
 
 %install
-export SOURCE_DATE_EPOCH=1584116418
+export SOURCE_DATE_EPOCH=1589538154
 rm -rf %{buildroot}
 export LANG=C.UTF-8
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
-export FCFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
-export FFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
+export FCFLAGS="$FFLAGS -O3 -flto -fno-semantic-interposition "
+export FFLAGS="$FFLAGS -O3 -flto -fno-semantic-interposition "
 export CXXFLAGS="$CXXFLAGS -O3 -flto -fno-semantic-interposition "
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
